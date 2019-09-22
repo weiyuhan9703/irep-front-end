@@ -1,0 +1,162 @@
+@import '../../theme/theme.less';
+.Container {
+  width: 100%;
+  position: relative;
+  .topContent {
+    width: 100%;
+    background-image: url(../../assets/login/login_background.png);
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // padding-left:260px;
+    // padding-right:260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .top {
+      width: 1200px;
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
+      .introductionText {
+        color: #ffffff;
+        font-size: 16px;
+        text-align: justify;
+        width: 700px;
+        span{
+          font-weight: bold;
+        }
+      }
+      .introductionVideo {
+        width: 380px;
+        height: 222px;
+        padding: 6px;
+        background-color: #ffffff;
+        background-image: url(../../assets/login/video.jpg);
+        border: solid 6px #ffffff;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .Content {
+    flex: 1;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    min-height: initial;
+    .leftDiv {
+      width: 300px;
+      height: 1000px;
+      background-color: #ffffff;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      margin: 0 20px 40px 0;
+      box-sizing: border-box;
+      .visitors {
+        height: 280px;
+        width: 280px;
+        margin: 0 auto;
+        border: solid 1px @border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .courseIntro {
+        height: 116px;
+        width: 256px;
+        border-bottom: dashed 1px @border-color;
+        display: flex;
+        align-items: center;
+        margin-left: 22px;
+        .infoTitle {
+          display: flex;
+          flex-direction: row;
+          font-size: 16px;
+          color: @primary-text-color;
+          .icon {
+            height: 20px;
+            width: 20px;
+            margin-right: 12px;
+          }
+        }
+        .infoText {
+          font-size: 16px;
+          color: @second-text-color;
+          margin-left: 28px;
+          margin-top: 12px;
+        }
+      }
+      .chooseButton {
+        padding-top: 32px;
+        .activeButton {
+          height: 46px;
+          width: 260px;
+          margin-top: 12px;
+          margin-left: 20px;
+          text-align: center;
+          font-size: 16px;
+          background-color: @warning-color;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          outline: none;
+          cursor: pointer;
+        }
+        .commonButton {
+          height: 46px;
+          width: 260px;
+          margin-top: 12px;
+          margin-left: 20px;
+          text-align: center;
+          font-size: 16px;
+          background-color: #f5f5f5;
+          color: @primary-text-color;
+          border: none;
+          border-radius: 4px;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+    .rightDiv {
+      background-color: #ffffff;
+      margin: 20px 0 40px 0;
+      flex: 1;
+      .mainContent {
+        margin: 40px;
+        border: solid 1px @border-color;
+        .title {
+          width: 100%;
+          height: 46px;
+          background-color: #f2f8fd;
+          font-size: 20px;
+          color: @primary-text-color;
+          display: flex;
+          align-items: center;
+          padding-left: 24px;
+          margin-bottom: 15px;
+          .titleIcon {
+            height: 20px;
+            width: 4px;
+            background-color: #1e88e5;
+            margin-right: 15px;
+          }
+        }
+        .texts {
+          padding-left: 24px;
+          padding-right: 24px;
+          font-size: 16px;
+          color: @second-text-color;
+          text-align: justify;
+          text-indent: 32px;
+          span{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

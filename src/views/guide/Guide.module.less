@@ -1,0 +1,41 @@
+@import '../../theme/theme.less';
+.Container {
+  width: 100%;
+  position: relative;
+  .topContainer {
+    width: 100%;
+    background-image: url(../../assets/notice/background.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topTitle {
+      font-weight: bold;
+      font-size: 24px;
+      color: #ffffff;
+      margin: 0;
+    }
+    .subTitle {
+      font-size: 14px;
+      display: flex;
+      color: #ffffff;
+    }
+  }
+  .videoContainer {
+    flex: 1;
+    margin: 20px auto;
+    padding: 20px 0;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    video {
+      outline: none;
+      max-width: 1200px;
+      width: 960px;
+    }
+  }
+}

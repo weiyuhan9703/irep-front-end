@@ -1,0 +1,40 @@
+@import "../../theme/theme.less";
+
+.KnowledgeWrapper {
+  border: 1px solid @border-color;
+  margin-top: 40px;
+  &:first-child {
+    margin-top: 30px;
+  }
+  &:last-child {
+    margin-bottom: 50px;
+  }
+  .TitleWrapper {
+    height: 50px;
+    background-color: #f6fbfc;
+    padding-left: 20px;
+    span {
+      font-size: 16px;
+      font-weight: bold;
+      height: inherit;
+      display: block;
+      line-height: 50px;
+      padding-left: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 20px;
+        background-color: @primary-color;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0px;
+      }
+    }
+  }
+  .Content {
+    padding: 30px 16px;
+  }
+}

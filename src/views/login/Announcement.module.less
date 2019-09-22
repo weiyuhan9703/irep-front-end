@@ -1,0 +1,84 @@
+@import "../../theme/theme.less";
+
+.Container {
+  width: 100%;
+  height: inherit;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.TitleRow {
+  height: 80px;
+  border-bottom: 1px dashed @border-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .Title {
+    position: relative;
+    font-size: 20px;
+    color: @primary-text-color;
+    display: block;
+    margin-left: 20px;
+    line-height: 80px;
+    height: 80px;
+    margin-right: 10px;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 4px;
+      height: 20px;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      background-color: @primary-color;
+    }
+  }
+  .Description {
+    color: @second-text-color;
+    font-size: 16px;
+  }
+}
+.NoticeItem {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    .NoticeTitle {
+      color: @primary-color;
+    }
+    .Time {
+      p {
+        color: @primary-color;
+      }
+    }
+  }
+  .NoticeTitle {
+    width: 480px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    // see https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  .Time {
+    text-align: right;
+    .Date {
+      font-size: 20px;
+      color: @primary-text-color;
+      margin-bottom: 0;
+    }
+    .Year {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }
+}

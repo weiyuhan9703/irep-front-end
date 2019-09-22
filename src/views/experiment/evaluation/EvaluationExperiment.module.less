@@ -1,0 +1,141 @@
+@import '../../../theme/theme.less';
+
+.NextStepBtn {
+  margin: 40px auto 50px auto;
+  text-align: right;
+}
+.SearchWrapper {
+  display: flex;
+  align-items: center;
+  .SearchLabel {
+    margin-right: 10px;
+  }
+  .Select {
+    width: 360px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+.ModalWrapper {
+  margin: 20px 0 42px 0;
+  .RadioGroup {
+    :global {
+      .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+        background-color: @information-color !important;
+      }
+    }
+  }
+}
+.TableNames {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 400px;
+    text-align: center;
+  }
+}
+.TableGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 42px;
+  .Table {
+    width: 400px;
+  }
+  .TableLeft {
+    margin-right: 20px;
+  }
+}
+.PerformanceBtn {
+  display: block;
+  margin: 42px 0 24px 0;
+}
+.PerformanceWrapper {
+  border: 1px solid @border-color;
+  height: 600px;
+}
+.PerformanceChart {
+  width: 100%;
+  height: 600px !important;
+}
+.LineChartGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 42px 0 24px 0;
+  p {
+    flex: 1;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+.ChartGroupWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 380px;
+  .GroupChart {
+    width: 400px;
+    height: 380px !important;
+    border: 1px solid @border-color;
+  }
+}
+.ChartTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 42px 0 24px 0;
+}
+.TextAreaTite {
+  font-size: 16px;
+  font-weight: bold;
+  color: @second-text-color;
+  position: relative;
+  padding-left: 20px;
+  box-sizing: border-box;
+  margin: 42px 0 24px 0;
+  &:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: @information-color;
+  }
+}
+.TextArea {
+  background-color: #fafafa;
+}
+.SaveBtn {
+  margin: 20px 0;
+  text-align: right;
+}
+.ModalWrapper {
+  display: flex;
+  .Modal {
+    width: 146px;
+    height: 46px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    border: 1px solid @border-color;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: background-color ease-in-out 0.2s;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .Active {
+    background-color: @information-color;
+    color: #fff;
+    border-color: @information-color;
+  }
+}

@@ -1,0 +1,118 @@
+@import '../../../theme/theme.less';
+.Section {
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 42px;
+  .SectionTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: @second-text-color;
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: @information-color;
+    }
+  }
+
+  .articleNavBar {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    .articelNumberBox {
+      font-size: 16px;
+      color: @second-text-color;
+    }
+  }
+  .originalArticleBox {
+    height: 160px;
+    margin-left: 10px;
+    border: solid 1px @border-color;
+    font-size: 15px;
+    text-align: justify;
+    padding: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-break: break-all;
+  }
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  // 词云部分
+  .wordCloudSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  //总结部分
+  .concludeSection {
+    margin: 30px 0px 20px 10px;
+    .ButtonRight {
+      text-align: right;
+      margin-top: 10px;
+    }
+  }
+
+  // 底下实验部分
+  .experimentSection {
+    margin-left: 10px;
+    padding-top: 30px;
+    .experimentChoose {
+      display: flex;
+      padding: 20px;
+      margin-bottom: 10px;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fafafa;
+      .segmentChoose {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .title {
+          font-size: 16px;
+          color: @second-text-color;
+          margin-right: 10px;
+        }
+      }
+      .button {
+        background-color: #2e7fc1;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        float: right;
+      }
+    }
+    .resultBox {
+      height: 160px;
+      border: solid 1px @border-color;
+      font-size: 14px;
+      text-align: justify;
+      padding: 8px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+  }
+  .NextBtn {
+    display: block;
+    margin: 20px auto 50px auto;
+  }
+}

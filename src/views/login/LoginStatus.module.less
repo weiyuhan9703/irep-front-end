@@ -1,0 +1,44 @@
+@import "../../theme/theme.less";
+
+.Container {
+  position: relative;
+  padding: 24px;
+  .NumberRow {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 24px;
+    .NumberBox {
+      width: 22px;
+      height: inherit;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 30px;
+      background-color: @primary-color;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .Tips {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .OnlineCount {
+    margin-bottom: 40px;
+    span {
+      font-size: 16px;
+      color: @second-text-color;
+    }
+    .OnlineNumber {
+      color: #ff6600;
+    }
+  }
+  .Help {
+    font-size: 16px;
+    color: @second-text-color;
+  }
+}

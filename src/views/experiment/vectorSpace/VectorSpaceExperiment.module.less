@@ -1,0 +1,450 @@
+@import '../../../theme/theme.less';
+
+.Section {
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 42px;
+  .SectionTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: @second-text-color;
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: @information-color;
+    }
+  }
+  .ExamBox {
+    padding: 30px;
+    border: 1px dashed @border-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .BoxWrapper {
+      height: 130px;
+      display: flex;
+      .BoxGroup {
+        height: inherit;
+        width: 152px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .BoxItem {
+          width: 100%;
+          height: 40px;
+          border-radius: 6px;
+          background-color: #e2edf8;
+          border: 1px dashed #2e7fc1;
+          position: relative;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover .IconWrapper,
+          &:hover .Icon {
+            opacity: 1;
+          }
+          .Name {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            span {
+              font-size: 12px;
+              color: @primary-text-color;
+              cursor: pointer;
+              user-select: none;
+              flex: 1;
+              display: flex;
+              height: 100%;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+          .IconWrapper {
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+          .Icon {
+            transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+            opacity: 0;
+            font-size: 28px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: @error-color;
+          }
+          .Index {
+            font-size: 20px;
+            flex: 1;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            user-select: none;
+            cursor: pointer;
+          }
+        }
+        .BoxItemDisabled {
+          cursor: default;
+          &:hover .IconWrapper,
+          &:hover .Icon {
+            opacity: 0;
+          }
+        }
+        .StepItem {
+          border: 1px solid #2e7fc1;
+        }
+        .DisabledBox {
+          cursor: not-allowed;
+          background-color: #f0f0f0;
+          color: @disabled-text-color;
+          border-color: #f0f0f0;
+        }
+      }
+      .ArrowGroup {
+        width: 50px;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .ArrowBox {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .Right {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .Arrow {
+        width: 22px;
+        height: 22px;
+        display: block;
+        margin: 0 14px;
+      }
+      .Down {
+        transform: rotate(270deg);
+      }
+    }
+  }
+  .BoxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 0 28px;
+    background-color: #f7fafa;
+    margin: 30px 0 10px 0;
+    .Card {
+      width: 170px;
+      height: 52px;
+      background-color: #e2eef7;
+      border: 1px solid #2e7fc1;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin: 0 28px 20px 0;
+      user-select: none;
+    }
+    .CardDisabled {
+      cursor: not-allowed;
+      background-color: #f0f0f0;
+      color: @disabled-text-color;
+      border-color: #f0f0f0;
+    }
+    .CurrentCard {
+      border-color: @information-color;
+      color: @information-color;
+      border-width: 2px;
+      font-weight: bold;
+      background-color: #dcf1ed;
+    }
+  }
+  .SaveOrder {
+    text-align: right;
+    margin-bottom: 30px;
+  }
+  .FormulaWrapper {
+    background-color: #f7fafa;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 30px;
+    .Radio {
+      margin: 0 40px 40px 0;
+    }
+    .BottomRadio {
+      margin-bottom: 0;
+    }
+    .Formula {
+      background-color: @information-color;
+      color: #fff;
+      font-size: 16px;
+      display: inline-block;
+      width: 170px;
+      text-align: center;
+      height: 46px;
+      line-height: 46px;
+      border-radius: 4px;
+    }
+    .InputNumber {
+      position: absolute;
+      right: 104px;
+      bottom: 30px;
+      height: 46px;
+      line-height: 46px;
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+  .SelectWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    .SelectLabel {
+      margin-right: 10px;
+    }
+    .Select {
+      width: 360px;
+      margin-right: 10px;
+    }
+  }
+  .TableGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 42px;
+    .Table {
+      width: 400px;
+    }
+    .TableLeft {
+      margin-right: 20px;
+    }
+  }
+  .SearchWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    .SearchLabel {
+      margin-right: 10px;
+    }
+    input {
+      width: 360px;
+      margin-right: 10px;
+    }
+  }
+  .LinkButton {
+    color: @primary-text-color;
+  }
+  .SearchResultTitle {
+    margin: 42px 0 24px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: @second-text-color;
+  }
+  .SearchResult {
+    padding: 30px;
+    border: 1px solid @border-color;
+    height: 300px;
+    overflow-y: auto;
+  }
+  .StepTips {
+    width: 100%;
+    height: 192px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: @third-text-color;
+    font-weight: bold;
+    user-select: none;
+    border: 1px solid @border-color;
+  }
+}
+.CommonRow {
+  margin-bottom: 20px;
+  .CommonLink {
+    color: @primary-color;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .ItemContent {
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    // see https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: left;
+    line-height: 24px;
+  }
+}
+.IDFRow {
+  margin-bottom: 40px;
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    padding: 10px;
+    &:last-child {
+      border-bottom: 1px solid @border-color;
+    }
+    .IDFRowLabel {
+      font-weight: bold;
+      color: @second-text-color;
+      font-size: 16px;
+      margin-right: 20px;
+      display: block;
+      width: 100px;
+    }
+    span {
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+}
+.PreProcessResult {
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    padding: 10px;
+    &:last-child {
+      border-bottom: 1px solid @border-color;
+    }
+    .PreProcessLabel {
+      font-weight: bold;
+      color: @second-text-color;
+      font-size: 16px;
+      margin-right: 20px;
+      display: block;
+      width: 100px;
+    }
+    span {
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+}
+.QueryTFRow {
+  margin-bottom: 40px;
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    padding: 10px;
+    &:last-child {
+      border-bottom: 1px solid @border-color;
+    }
+    .QueryTFLabel {
+      font-weight: bold;
+      color: @second-text-color;
+      font-size: 16px;
+      margin-right: 20px;
+      display: block;
+      width: 100px;
+    }
+    span {
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+}
+.VectorResultRow {
+  margin-bottom: 40px;
+  p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border: 1px solid @border-color;
+    border-bottom: none;
+    padding: 10px;
+    &:last-child {
+      border-bottom: 1px solid @border-color;
+    }
+    .VectorLabel {
+      font-weight: bold;
+      color: @second-text-color;
+      font-size: 16px;
+      margin-right: 20px;
+      display: block;
+      width: 100px;
+    }
+    span {
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+}
+.DocTFTitle {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  &:last-child {
+    border-bottom: 1px solid @border-color;
+  }
+  .DocTFTitleLabel {
+    font-weight: bold;
+    color: @second-text-color;
+    font-size: 16px;
+    margin-right: 20px;
+    display: block;
+    width: 100px;
+  }
+  span {
+    &:last-child {
+      flex: 1;
+    }
+  }
+}
+.NextBtn {
+  margin: 40px auto 50px auto;
+  display: block;
+}

@@ -1,0 +1,95 @@
+@import '../../theme/theme.less';
+.Container{
+  width: 100%;
+  position: relative;
+  .topContainer{
+    width: 100%;
+    background-image: url(../../assets/notice/background.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topTitle{
+      font-weight: bold;
+      font-size: 24px;
+      color:#ffffff;
+      margin: 0;
+    }
+    .subTitle{
+      font-size: 14px;
+      display: flex;
+      color:#ffffff;
+    }
+  }
+  .Content{
+    flex: 1;
+    widows: 0;
+    margin: 20px auto 60px auto;
+    display: flex;    
+    min-height: initial;
+    background-color: #ffffff;
+    justify-content: center;
+    width: 1200px;
+    padding:20px 80px 30px 80px;
+    .Report{
+        display: flex;
+        flex-direction: column;
+        width:1200px;
+
+        .ReportTitle{
+            color: @primary-text-color;
+            font-size: 22px;
+            font-weight: 500;
+            width:100%;
+            text-align: center;
+        }
+        .reporTop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 16px;
+            align-items: center;
+            margin-top:15px;
+            .topInput{
+                width:120px;
+                border:none;
+                border-bottom: solid 1px black;
+                text-align: center;
+                height: 20px;
+            }
+        }
+        .reporTop2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 16px;
+            align-items: center;
+            margin-top:15px;
+            margin-bottom: 20px;
+            .topInput2{
+                border:none;
+                border-bottom: solid 1px black;
+                text-align: center;
+                height: 20px;
+                width: 500px;
+            }
+            .topInput3{
+                border:none;
+                border-bottom: solid 1px black;
+                text-align: center;
+                height: 20px;
+                width: 300px;
+            }
+        }
+        .table{
+            border:1px;
+        }
+        
+    }
+    
+  }
+}

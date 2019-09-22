@@ -1,0 +1,120 @@
+@import './theme/theme.less';
+
+.GlobalMainContainer {
+  padding-top: 70px;
+  flex: 1;
+}
+
+.GlobalLoginPage {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.GlobalContainer {
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+  display: flex;
+}
+
+.GlobalExamItem {
+  .ant-form-item-control {
+    line-height: 40px;
+    .ant-form-explain {
+      display: none;
+    }
+    .ant-input {
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+      border-radius: 0;
+    }
+  }
+  .has-error {
+    .ant-input {
+      border-color: @error-color;
+    }
+    .ant-checkbox-inner {
+      border-color: @error-color;
+    }
+  }
+}
+
+.GlobalExamCheckboxGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  box-sizing: border-box;
+  .ant-checkbox-wrapper {
+    margin-left: 0;
+    line-height: 36px;
+  }
+}
+
+.MathJax_SVG {
+  outline: none;
+}
+
+.GlobalVectorSpaceTable {
+  .ant-table-small > .ant-table-content > .ant-table-body {
+    margin: 0;
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+      &:nth-child(even) {
+        background-color: #fff;
+      }
+    }
+    td {
+      height: 59px;
+      vertical-align: middle;
+    }
+  }
+
+  .GlobalVectorSpaceTdEllipsis {
+    max-width: 226px;
+    width: 226px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    // see https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: left;
+    line-height: 21px;
+  }
+  .GlobalVectorSapceTd {
+    line-height: 42px;
+    text-align: center;
+  }
+}
+
+// ant-design 默认选择空间的下拉选项的z-index为1050
+.ant-select-dropdown {
+  z-index: 2 !important;
+}
+
+.GlobalEvaluationRadioGroup {
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    background-color: @information-color !important;
+    border-color: @information-color !important;
+    box-shadow: -1px 0 0 0 @information-color;
+  }
+  .ant-radio-button-wrapper:hover {
+    color: @information-color;
+  }
+  .ant-radio-button-wrapper {
+    height: 46px;
+    line-height: 44px;
+    padding: 0 20px;
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+    background-color: @information-color !important;
+  }
+}

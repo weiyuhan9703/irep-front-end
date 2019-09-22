@@ -1,0 +1,97 @@
+@import '../../../theme/theme.less';
+
+.Container {
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+  display: flex;
+  .Content {
+    flex: 1;
+    min-height: initial;
+    background-color: #fff;
+    margin: 20px 0 40px 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 0;
+    .MiddleSection {
+      margin-top: 200px;
+      text-align: center;
+      .logo{
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+      }
+      .SectionTitle {
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        color: @primary-color;
+        text-align: center;
+        font-family: "AliHYAiHei"
+      }
+      .InputSection {
+        margin-top: 20px;
+        width: 80%;
+      }
+    }
+    .topSection {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      .logo{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+      }
+      .topTitle {
+        font-size: 18px;
+        font-weight: 400;
+        color: @primary-text-color;
+        font-family: "AliHYAiHei"
+      }
+      .InputSection {
+        width: 60%;
+        margin-left: 10px;
+      }
+    }
+    .ResultSection {
+      margin-top: 30px;
+      .Result {
+        margin-bottom: 20px;
+        .resultTitle {
+          color: @primary-color;
+          font-size: 18px;
+          font-weight: 400;
+          text-decoration-line: underline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          display: block;
+        }
+        .resultContent {
+          color: @second-text-color;
+          margin-top: 6px;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          // see https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+          /* autoprefixer: ignore next */
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          text-align: left;
+          line-height: 24px;
+        }
+      }
+    }
+    .NextBtn {
+      display: block;
+      margin: 50px auto;
+    }
+    .lastStep{
+      margin-top:220px;
+      float: left;
+    }
+  }
+}

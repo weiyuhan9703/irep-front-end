@@ -1,0 +1,95 @@
+@import '../../theme/theme.less';
+.Container{
+  width: 100%;
+  position: relative;
+  .topContainer{
+    width: 100%;
+    background-image: url(../../assets/notice/background.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topTitle{
+      font-weight: bold;
+      font-size: 24px;
+      color:#ffffff;
+      margin: 0;
+    }
+    .subTitle{
+      font-size: 14px;
+      display: flex;
+      color:#ffffff;
+    }
+  }
+  .Content{
+    flex: 1;
+    widows: 0;
+    margin: 20px auto 60px auto;
+    display: flex;    
+    min-height: initial;
+    background-color: #ffffff;
+    justify-content: center;
+    .notices{
+      width: 1200px;
+      justify-content: center;
+      margin-top: 39px;
+      margin-bottom: 4px;
+      .Pagination{
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        margin-bottom: 86px;
+      }
+    }
+  }
+}
+.NoticeItem {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px @border-color solid;
+  margin-bottom: 26px;
+  padding: 0 30px;
+
+  cursor: pointer;
+  &:hover {
+    .NoticeTitle {
+      color:@second-text-color;
+    }
+    .Time {
+      p {
+        color:@second-text-color;
+      }
+    }
+  }
+  .NoticeTitle {
+    max-width: 1000px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    // see https://github.com/postcss/autoprefixer/issues/776#issuecomment-392346351
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    text-align: left;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  .Time {
+    text-align: right;
+    .Date {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .Year {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+}

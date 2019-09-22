@@ -1,0 +1,40 @@
+@import '../../theme/theme.less';
+.Container{
+  width: 100%;
+  position: relative;
+  .topContainer{
+    width: 100%;
+    background-image: url(../../assets/notice/background.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topTitle{
+      font-weight: bold;
+      font-size: 24px;
+      color:#ffffff;
+      margin: 0;
+    }
+    .subTitle{
+      font-size: 14px;
+      display: flex;
+      color:#ffffff;
+    }
+  }
+  .Content{
+    width: 1200px;
+    margin: 50px auto 100px auto;
+    // height: 670px;
+    background-color: #ffffff;
+    padding: 24px;
+    font-size: 16px;
+    color: @second-text-color;
+    text-align: justify;
+    text-indent: 32px;
+    font-weight: 400;
+  }
+}

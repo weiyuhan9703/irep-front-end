@@ -1,0 +1,169 @@
+@import '../../theme/theme.less';
+.Container{
+  width: 100%;
+  position: relative;
+  .topContainer{
+    width: 100%;
+    background-image: url(../../assets/notice/background.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topTitle{
+      font-weight: bold;
+      font-size: 24px;
+      color:#ffffff;
+      margin: 0;
+    }
+    .subTitle{
+      font-size: 14px;
+      display: flex;
+      color:#ffffff;
+    }
+  }
+  .Content{
+    flex: 1;
+    widows: 0;
+    margin: 20px auto 60px auto;   
+    min-height: initial;
+    background-color: #ffffff;
+    width: 1200px;
+    padding:20px 80px 90px 80px;
+    .CommentView{
+      width: 100%;
+      padding-top:20px;
+      padding-bottom: 60px;
+      border-bottom:solid 1px @border-color;
+      .mainComment{
+        display: flex;
+        flex-direction: row;
+        .leftView{
+          width:900px;
+          display: flex;
+          flex-direction: column;
+          margin-right: 44px;
+          font-size: 16px;
+          color: #333333;
+          span{
+            margin-right:28px;
+            font-size:14px;
+            color: #999999;
+            img{
+              width:14px;
+              height:14px;
+              margin-right: 5px;
+            }
+          }
+        }
+        .rightView{
+          float: right;
+          font-size: 16px;
+          columns: #999999;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img{
+            width:16px;
+            height:16px;
+            margin-right:8px;
+          }
+          button{
+            border:none
+          }
+        }
+      }
+      .addCommentView{
+        width:100%;
+        height:150px;
+        background-color: #f6fbfc;
+        margin-top:30px;
+        padding:20px;
+        .commentInput{
+          border:solid 1px #c3dcf5;
+          height:80px;
+          width: 100%;
+          background-color: #ffffff;
+          padding:10px;
+        }
+        .buttonView{
+          display: flex;
+          flex-direction: row;
+          margin-top:15px;
+          float: right;
+          .button1{
+            width:80px;
+            height:28px;
+            background-color: #b3b3b3;
+            border:none;
+            font-size: 14px;
+            text-align: center;
+            color:#ffffff;
+          }
+          .button2{
+            margin-left:15px;
+            width:80px;
+            height:28px;
+            background-color: @primary-color;
+            border:none;
+            font-size: 14px;
+            text-align: center;
+            color:#ffffff;
+          }
+        }
+      }
+      .childrenCommentView{
+        margin-top:15px;
+        .childComment{
+          width:100%;
+          border:solid 1px @border-color;
+          padding:30px 30px 30px 30px;
+          font-size: 14px;
+          .childComment1{
+            display: flex;
+            flex-wrap:wrap;
+            .name{
+              color: @primary-color
+            }
+            .content{
+              color:@primary-text-color
+            }
+          }
+          .childComment2{
+            display: flex;
+            float: right;
+          }
+        }
+      }
+    }
+    .myComment{
+      margin-top:30px;
+      width:100%;
+      padding-bottom:90px;
+      .textInput{
+        background-color: #f6fbfc;
+        border:solid 1px #c3dcf5;
+        height:130px;
+        width:100%;
+        margin-bottom:20px;
+        font-size:16px;
+        padding:10px;
+      }
+      .confirmButton{
+        width:120px;
+        height:42px;
+        float: right;
+        background-color: @primary-color;
+        color: #ffffff;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:none;
+      }
+    }
+  }
+}
