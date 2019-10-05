@@ -65,5 +65,3 @@ export type ValueKeys =
   | 'p5'
   | 'precision'
 
-
-  

@@ -34,4 +34,3 @@ export interface ProcessedCompletionQuestion {
   answer: string
   score: number
 }
-

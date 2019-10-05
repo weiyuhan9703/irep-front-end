@@ -66,4 +66,3 @@ export interface QueryBIJResult {
   docId: number
   term: string
 }
-

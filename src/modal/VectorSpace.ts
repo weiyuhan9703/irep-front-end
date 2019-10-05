@@ -14,4 +14,3 @@ export interface StandardResult {
   isExisting: boolean | null
   title: string
 }
-
